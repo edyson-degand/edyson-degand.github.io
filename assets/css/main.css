@@ -571,17 +571,14 @@ section,
   border-bottom: 2px solid var(--accent-color);
 }
 
-.Accueil .social-links { 
-  margin-top: 25px; 
-  animation: fadeUp 1.4s ease-out forwards;
-}
+.Accueil .social-links { margin-top: 25px; }
 .Accueil .social-links a{
   display:inline-flex;align-items:center;justify-content:center;
   width:40px;height:40px;border-radius:50%;
   border:1px solid rgba(0, 0, 0, 0.55);
   color:#000000; margin-right:12px; transition:.2s;
 }
-.Accueil .social-links a:hover{ background:#fff; color:#111; border-color:#fff; }
+.Accueil .social-links a:hover{ background:#ffffff; color:#111; border-color:#ffffff; }
 
 
 @media (max-width: 768px) {
