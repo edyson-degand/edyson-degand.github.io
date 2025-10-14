@@ -523,6 +523,7 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .Accueil img {
@@ -552,34 +553,36 @@ section,
   margin: 0;
   font-size: 64px;
   font-weight: 700;
+  animation: fadeUp 1s ease-out forwards;
+  text-shadow: 0 0 20px rgba(0,0,0,0.5);
+  color:rgb(43, 42, 42);
 }
 
 .Accueil p {
   margin: 5px 0 0 0;
   font-size: 26px;
+  animation: fadeUp 1.2s ease-out forwards;
+  color:rgb(43, 42, 42);
 }
 
 .Accueil p span {
   letter-spacing: 1px;
+  text-shadow: 0 0 12px rgba(0,0,0,0.4);
   border-bottom: 2px solid var(--accent-color);
 }
 
-.Accueil .social-links {
-  margin-top: 25px;
+.Accueil .social-links { 
+  margin-top: 25px; 
+  animation: fadeUp 1.4s ease-out forwards;
 }
+.Accueil .social-links a{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:40px;height:40px;border-radius:50%;
+  border:1px solid rgba(0, 0, 0, 0.55);
+  color:#000000; margin-right:12px; transition:.2s;
+}
+.Accueil .social-links a:hover{ background:#fff; color:#111; border-color:#fff; }
 
-.Accueil .social-links a {
-  font-size: 20px;
-  display: inline-block;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  line-height: 1;
-  margin-right: 20px;
-  transition: 0.3s;
-}
-
-.Accueil .social-links a:hover {
-  color: var(--accent-color);
-}
 
 @media (max-width: 768px) {
   .Accueil h2 {
@@ -590,6 +593,11 @@ section,
     font-size: 20px;
   }
 }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 
 /*--------------------------------------------------------------
 # À propos Section
@@ -1286,4 +1294,15 @@ section,
 --------------------------------------------------------------*/
 .starter-section -section {
   /* Add your styles here */
+}
+
+
+.btn {
+  border-radius: 999px;
+  padding: .75rem 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
