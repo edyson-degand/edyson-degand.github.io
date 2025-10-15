@@ -649,8 +649,7 @@ section,
 /* Flèche en bas de la section Accueil */
 .scroll-down{
   position: absolute;
-  margin-bottom: 40px;
-  bottom: 40px;
+  margin-bottom: -20px;
   left:50%;
   align-self: center;
   transform: translateX(-50%);
