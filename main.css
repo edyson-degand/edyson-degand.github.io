@@ -656,6 +656,11 @@ section,
   z-index: 5;
   bottom: calc(24px + env(safe-area-inset-bottom));
 }
+@media (max-width: 768px) {
+  .scroll-down {
+    margin-bottom: 20px;
+  }
+}
 
 .scroll-down a{
   display: inline-block; 
