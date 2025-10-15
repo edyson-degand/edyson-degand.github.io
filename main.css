@@ -528,7 +528,7 @@ section,
   .Accueil{ min-height: 92vh; }
 }
 @media (max-width: 768px){
-  .Accueil{ min-height: 90vh; 
+  .Accueil{ min-height: 100vh; 
     padding: 48px 0; }
 }
 .Accueil img {
