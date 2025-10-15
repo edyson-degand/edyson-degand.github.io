@@ -516,10 +516,10 @@ section,
 # Accueil Section
 --------------------------------------------------------------*/
 .Accueil {
+  min-height: 85vh;               /* évite le "trop grand" sur petits écrans */
+  padding: 60px 0 96px; 
   width: 100%;
-  min-height: 100vh;
   position: relative;
-  padding: 80px 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -537,7 +537,7 @@ section,
 
 .Accueil:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  background: rgba(255,255,255,.65);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -549,17 +549,19 @@ section,
 }
 
 .Accueil h2 {
+  font-size: clamp(28px, 7vw, 55px);
+  line-height: 1.15;
   margin: 0;
-  font-size: 55px;
   font-weight: 700;
 }
 
-.typed{
-  font-size: 24px;
-}
+.typed{ font-size: inherit; }
+
 .Accueil p {
   margin: 5px 0 0 0;
-  font-size: 26px;
+  font-size: clamp(16px, 4.2vw, 26px);
+  line-height: 1.4;
+  margin-top: .4rem;
 }
 
 .Accueil p span {
@@ -585,17 +587,22 @@ section,
   color: var(--accent-color);
 }
 
+.intro-top{
+  font-size: clamp(14px, 3.8vw, 18px) !important;
+  background: rgba(255,255,255,.7);
+  border-radius: 12px;
+  padding: .5rem .75rem !important;
+  max-width: min(92vw, 720px);
+}
 
-
-@media (max-width: 768px) {
-  .Accueil h2 {
-    font-size: 32px;
-  }
-
-  .Accueil p {
-    font-size: 20px;
+@media (max-width: 576px){
+  .Accueil .social-links a{
+    font-size: 18px;
+    margin-right: 14px;
   }
 }
+
+
 
 /* Flèche en bas de la section Accueil */
 .scroll-down{
@@ -605,6 +612,8 @@ section,
   left: 50%;
   transform: translateX(-50%);
   z-index: 5;
+  bottom: calc(24px + env(safe-area-inset-bottom));
+
 }
 
 .scroll-down a{
