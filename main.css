@@ -517,7 +517,7 @@ section,
 --------------------------------------------------------------*/
 .Accueil {
   width: 100%;
-  min-height: 85vh;         /* évite l’effet “trop grand” sur mobile */
+  min-height: 100vh;         /* évite l’effet “trop grand” sur mobile */
   position: relative;
   padding: 60px 0;          /* un peu moins d’air en haut/bas */
   display: flex;
@@ -554,6 +554,7 @@ section,
   font-size: clamp(28px, 6.8vw, 52px);  /* titre fluide, ne déborde plus sur mobile */
   line-height: 1.15;
   margin: 0;
+  color: var(--accent-color);
   font-weight: 700;
 }
 
@@ -572,17 +573,18 @@ section,
 }
 
 .Accueil .social-links {
-  
+  align-self: center;
   margin-top: 25px;
 }
 
 .Accueil .social-links a {
-  font-size: 18px;                      /* un poil plus discret sur mobile */
+  font-size: 28px;                      /* un poil plus discret sur mobile */
   display: inline-block;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   line-height: 1;
   margin-right: 14px;
   transition: 0.3s;
+  align-self: center;
 }
 
 
@@ -593,7 +595,7 @@ section,
 
 .intro-top{
   font-size: clamp(14px, 3.8vw, 18px) !important;
-  background: rgba(255,255,255,.7);
+  background: rgba(255, 255, 255);
   border-radius: 12px;
   padding: .5rem .75rem !important;
   max-width: min(92vw, 720px);
@@ -613,7 +615,7 @@ section,
   position: absolute;
   margin-bottom: 40px;
   bottom: 40px;
-  left: 50%;
+  align-self: center;
   transform: translateX(-50%);
   z-index: 5;
   bottom: calc(24px + env(safe-area-inset-bottom));
@@ -1506,14 +1508,4 @@ section,
   /* Add your styles here */
 }
 
-@media (max-width: 768px) {
-  .Accueil {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .Accueil .texte-accueil {
-    position: relative;
-    top: 0 !important; /* recentre verticalement sur mobile */
-  }
-}
+
