@@ -516,14 +516,15 @@ section,
 # Accueil Section
 --------------------------------------------------------------*/
 .Accueil {
-  min-height: 85vh;               /* évite le "trop grand" sur petits écrans */
-  padding: 60px 0 96px; 
   width: 100%;
+  min-height: 85vh;         /* évite l’effet “trop grand” sur mobile */
   position: relative;
+  padding: 60px 0;          /* un peu moins d’air en haut/bas */
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 
 .Accueil img {
   position: absolute;
@@ -537,11 +538,12 @@ section,
 
 .Accueil:before {
   content: "";
-  background: rgba(255,255,255,.65);
+  background: color-mix(in srgb, var(--background-color), transparent 45%); /* texte plus lisible */
   position: absolute;
   inset: 0;
   z-index: 2;
 }
+
 
 .Accueil .container {
   position: relative;
@@ -549,7 +551,7 @@ section,
 }
 
 .Accueil h2 {
-  font-size: clamp(28px, 7vw, 55px);
+  font-size: clamp(28px, 6.8vw, 52px);  /* titre fluide, ne déborde plus sur mobile */
   line-height: 1.15;
   margin: 0;
   font-weight: 700;
@@ -559,7 +561,7 @@ section,
 
 .Accueil p {
   margin: 5px 0 0 0;
-  font-size: clamp(16px, 4.2vw, 26px);
+  font-size: clamp(16px, 4vw, 22px);    /* corps de texte fluide */
   line-height: 1.4;
   margin-top: .4rem;
 }
@@ -575,13 +577,15 @@ section,
 }
 
 .Accueil .social-links a {
-  font-size: 20px;
+  font-size: 18px;                      /* un poil plus discret sur mobile */
   display: inline-block;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   line-height: 1;
-  margin-right: 20px;
+  margin-right: 14px;
   transition: 0.3s;
 }
+
+
 
 .Accueil .social-links a:hover {
   color: var(--accent-color);
@@ -1502,3 +1506,14 @@ section,
   /* Add your styles here */
 }
 
+@media (max-width: 768px) {
+  .Accueil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .Accueil .texte-accueil {
+    position: relative;
+    top: 0 !important; /* recentre verticalement sur mobile */
+  }
+}
