@@ -528,7 +528,8 @@ section,
   .Accueil{ min-height: 92vh; }
 }
 @media (max-width: 768px){
-  .Accueil{ min-height: 85vh; padding: 48px 0; }
+  .Accueil{ min-height: 90vh; 
+    padding: 48px 0; }
 }
 .Accueil img {
   position: absolute;
@@ -561,9 +562,14 @@ section,
   color: var(--accent-color);
   font-weight: 700;
 }
-
+@media (max-width: 768px){
+  .Accueil h2{ font-size: 35px;  }
+}
 .typed{ font-size: inherit;
  color:black;}
+
+ @media (max-width: 768px){
+  .Accueil h2{ font-size: 15px;  }}
 
 .Accueil p {
   margin: 5px 0 0 0;
@@ -597,7 +603,10 @@ section,
   margin-right:16px; 
   font-size:22px;
 }
-
+ @media (max-width: 768px){
+  .Accueil .social-links a{ 
+     width: 30px;
+    height:30px }}
 .Accueil .social-links a:hover{ color:var(--accent-color); 
   border-color:var(--accent-color); 
   transform:scale(1.05); }
@@ -626,7 +635,16 @@ section,
   }
 }
 
+.je-suis {
+  color:black;
+  font-size: 24px;
+}
 
+@media (max-width: 768px) {
+  .je-suis {
+    font-size: 18px;
+  }
+}
 
 /* Flèche en bas de la section Accueil */
 .scroll-down{
