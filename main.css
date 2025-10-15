@@ -657,8 +657,8 @@ section,
   bottom: calc(24px + env(safe-area-inset-bottom));
 }
 @media (max-width: 768px) {
-  .scroll-down {
-    margin-bottom: 50px;
+  .scroll-down{
+    bottom: calc(50px + env(safe-area-inset-bottom)); /* au lieu de margin-bottom */
   }
 }
 
