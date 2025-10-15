@@ -524,8 +524,12 @@ section,
   align-items: center;
   justify-content: center;
 }
-
-
+@media (max-width: 1200px){
+  .Accueil{ min-height: 92vh; }
+}
+@media (max-width: 768px){
+  .Accueil{ min-height: 85vh; padding: 48px 0; }
+}
 .Accueil img {
   position: absolute;
   inset: 0;
@@ -538,7 +542,7 @@ section,
 
 .Accueil:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 45%); /* texte plus lisible */
+  background: color-mix(in srgb, var(--background-color), transparent 42%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -558,7 +562,8 @@ section,
   font-weight: 700;
 }
 
-.typed{ font-size: inherit; }
+.typed{ font-size: inherit;
+ color:black;}
 
 .Accueil p {
   margin: 5px 0 0 0;
@@ -577,15 +582,27 @@ section,
   margin-top: 25px;
 }
 
-.Accueil .social-links a {
-  font-size: 28px;                      /* un poil plus discret sur mobile */
-  display: inline-block;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  line-height: 1;
-  margin-right: 14px;
-  transition: 0.3s;
-  align-self: center;
+.Accueil .social-links a{
+  width:48px;
+  height:48px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:2px solid color-mix(in srgb,var(--default-color),transparent 20%);
+  border-radius:50%; 
+  background:rgba(255,255,255,.25); 
+  backdrop-filter:blur(3px);
+  color:var(--default-color); 
+  transition:.3s; 
+  margin-right:16px; 
+  font-size:22px;
 }
+
+.Accueil .social-links a:hover{ color:var(--accent-color); 
+  border-color:var(--accent-color); 
+  transform:scale(1.05); }
+
+
 
 
 
@@ -595,10 +612,11 @@ section,
 
 .intro-top{
   font-size: clamp(14px, 3.8vw, 18px) !important;
-  background: rgba(255, 255, 255);
-  border-radius: 12px;
+  background:rgba(255,255,255,.78);
+  border-radius:12px;
   padding: .5rem .75rem !important;
   max-width: min(92vw, 720px);
+  color:black !important;
 }
 
 @media (max-width: 576px){
@@ -615,11 +633,11 @@ section,
   position: absolute;
   margin-bottom: 40px;
   bottom: 40px;
+  left:50%;
   align-self: center;
   transform: translateX(-50%);
   z-index: 5;
   bottom: calc(24px + env(safe-area-inset-bottom));
-
 }
 
 .scroll-down a{
@@ -638,7 +656,23 @@ section,
   60% { transform: translateY(-4px); }
 }
 
+.link_iut span{
+  font-size: 0.9em; 
+  color: #666;
+  top:10px;
+  position: relative;
 
+}
+
+.link_iut:hover span{
+  color: var(--accent-color);
+}
+
+.link_iut i { font-size:.8em; opacity:.6; transition:.25s; }
+
+.link_iut { display:inline-flex; align-items:center; gap:4px; }
+
+.link_iut:hover i { opacity:1; color:var(--accent-color); }
 /*--------------------------------------------------------------
 # À propos Section
 --------------------------------------------------------------*/
