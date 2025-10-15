@@ -528,7 +528,7 @@ section,
   .Accueil{ min-height: 92vh; }
 }
 @media (max-width: 768px){
-  .Accueil{ min-height: 100vh; 
+  .Accueil{ min-height: 90vh; 
     padding: 48px 0; }
 }
 .Accueil img {
@@ -655,11 +655,6 @@ section,
   transform: translateX(-50%);
   z-index: 5;
   bottom: calc(24px + env(safe-area-inset-bottom));
-}
-@media (max-width: 768px) {
-  .scroll-down{
-    bottom: calc(50px + env(safe-area-inset-bottom)); /* au lieu de margin-bottom */
-  }
 }
 
 .scroll-down a{
